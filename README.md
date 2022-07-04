@@ -38,6 +38,7 @@
    * [Define custom module name](#--modulename)
    * [Omit paths collection on save](#--omitpaths)
    * [Save in other connection](#--connectionuri)
+   * [Connection from model](#--connectionfrommodel)
    * [Add new fields on logs](#--addcollectionpaths)
 * [Credits](#credits)
 * [Tests](#tests)
@@ -360,6 +361,17 @@ const options = { connectionUri: 'mongodb://localhost/other_db' }
 
 User.plugin(mongooseHistory, options)
 ```
+
+#### - connectionFromModel
+> You can get the connectionUri from the model instead of providing it via config. 
+This can be useful when the connectionUri is dynamic
+
+```javascript
+const options = { connectionFromModel: true }
+
+User.plugin(mongooseHistory, options)
+```
+
 
  [Back to Table Contents](#table-of-contents)
 
